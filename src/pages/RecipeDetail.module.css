@@ -1,0 +1,235 @@
+.recipeDetail {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 70px);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #667eea;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.backLink:hover {
+  transform: translateX(-5px);
+  text-decoration: underline;
+}
+
+.recipeHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.recipeHeader h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.recipeImage {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.recipeMetaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.metaItem {
+  text-align: center;
+  padding: 1rem;
+}
+
+.metaItem .label {
+  display: block;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.metaItem .value {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.recipeContent {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.ingredientsSection, .instructionsSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ingredientsSection h2, .instructionsSection h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ingredientsList {
+  list-style: none;
+}
+
+.ingredientsList li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+.ingredientsList li:hover {
+  background: #f8f9fa;
+  padding-left: 2.5rem;
+}
+
+.ingredientsList li:before {
+  content: "✔";
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.instructionsList {
+  list-style: none;
+  counter-reset: instruction-counter;
+}
+
+.instructionsList li {
+  counter-increment: instruction-counter;
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
+  position: relative;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.instructionsList li:hover {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem 1rem 1rem 3rem;
+}
+
+.instructionsList li:before {
+  content: counter(instruction-counter);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.recipeTags {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.recipeTags h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: #e0e7ff;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.loadingContainer, .errorContainer, .notFoundContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.loading {
+  color: #667eea;
+  font-size: 1.3rem;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 1.3rem;
+}
+
+.notFound {
+  color: #666;
+  font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipeContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .recipeMetaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recipeHeader h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipeMetaGrid {
+    grid-template-columns: 1fr;
+  }
+}
