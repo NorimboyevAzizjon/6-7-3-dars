@@ -178,7 +178,6 @@
   opacity: 0.9;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .aboutHero h1 {
     font-size: 2.2rem;

@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <div className={styles.aboutPage}>
-      {/* Hero Section */}
+    
       <motion.section 
         className={styles.aboutHero}
         initial={{ opacity: 0, y: 30 }}
@@ -24,7 +24,7 @@ const About = () => {
         <p>Oshpazlik sevgisi bilan birlashtirgan professional jamoa</p>
       </motion.section>
 
-      {/* Mission Section */}
+      
       <section className={styles.missionSection}>
         <div className="container">
           <div className={styles.missionGrid}>
@@ -73,7 +73,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+     
       <section className={styles.teamSection}>
         <div className="container">
           <motion.h2 
@@ -108,7 +108,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className={styles.statsSection}>
         <div className="container">
           <div className={styles.statsGrid}>

@@ -30,7 +30,6 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        {/* Logo */}
         <div className={styles.navLogo}>
           <Link to="/" className={styles.logoLink}>
             <ChefHat size={28} className={styles.logoIcon} />
@@ -38,7 +37,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <div className={styles.navMenu}>
           {navItems.map((item) => (
             <Link
@@ -53,7 +51,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button 
           className={styles.mobileMenuBtn}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,7 +59,6 @@ const Navbar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Navigation */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
           {navItems.map((item) => (
             <Link

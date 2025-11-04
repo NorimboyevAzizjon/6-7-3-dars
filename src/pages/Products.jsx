@@ -27,10 +27,10 @@ const Products = () => {
       })
   }, [])
 
-  // Unique cuisines for filter
+
   const uniqueCuisines = [...new Set(recipes.map(recipe => recipe.cuisine))]
 
-  // Filter recipes
+
   const filteredRecipes = recipes.filter(recipe => {
     const matchesSearch = recipe.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          recipe.cuisine.toLowerCase().includes(searchTerm.toLowerCase())
@@ -43,7 +43,7 @@ const Products = () => {
 
   return (
     <div className={styles.productsPage}>
-      {/* Hero Section */}
+    
       <motion.section 
         className={styles.productsHero}
         initial={{ opacity: 0, y: 30 }}
@@ -56,7 +56,7 @@ const Products = () => {
         </div>
       </motion.section>
 
-      {/* Search and Filter Section */}
+      
       <section className={styles.filtersSection}>
         <div className="container">
           <motion.div 
@@ -93,7 +93,7 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Recipes Grid */}
+    
       <section className={styles.recipesSection}>
         <div className="container">
           <motion.div 

@@ -7,7 +7,6 @@ import styles from './Home.module.css'
 const Home = () => {
   return (
     <div className={styles.home}>
-      {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <motion.h1 

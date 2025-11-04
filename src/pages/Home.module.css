@@ -210,7 +210,6 @@
   opacity: 0.9;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .heroSection {
     grid-template-columns: 1fr;

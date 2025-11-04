@@ -40,7 +40,7 @@ const Blog = () => {
 
   return (
     <div className={styles.blogPage}>
-      {/* Hero Section */}
+   
       <motion.section 
         className={styles.blogHero}
         initial={{ opacity: 0, y: 30 }}
@@ -53,7 +53,6 @@ const Blog = () => {
         </div>
       </motion.section>
 
-      {/* Featured Posts */}
       <section className={styles.featuredSection}>
         <div className="container">
           <motion.h2 
@@ -114,7 +113,7 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+  
       <motion.section 
         className={styles.newsletterSection}
         initial={{ opacity: 0, y: 30 }}

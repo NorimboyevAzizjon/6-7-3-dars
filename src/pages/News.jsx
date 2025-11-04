@@ -48,7 +48,6 @@ const News = () => {
 
   return (
     <div className={styles.newsPage}>
-      {/* Hero Section */}
       <motion.section 
         className={styles.newsHero}
         initial={{ opacity: 0, y: 30 }}
@@ -61,7 +60,6 @@ const News = () => {
         </div>
       </motion.section>
 
-      {/* Featured News */}
       <section className={styles.featuredSection}>
         <div className="container">
           <motion.div 
@@ -125,7 +123,6 @@ const News = () => {
         </div>
       </section>
 
-      {/* All News Grid */}
       <section className={styles.newsGridSection}>
         <div className="container">
           <motion.h2 
