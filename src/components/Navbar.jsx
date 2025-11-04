@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { 
+  Home, 
+  Users, 
+  FileText, 
+  Newspaper, 
+  ChefHat,
+  Menu,
+  X
+} from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -7,11 +16,11 @@ const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'Home', icon: '🏠' },
-    { path: '/about', label: 'About', icon: '👥' },
-    { path: '/blog', label: 'Blog', icon: '📝' },
-    { path: '/news', label: 'News', icon: '📰' },
-    { path: '/products', label: 'Recipes', icon: '🍳' }
+    { path: '/', label: 'Home', icon: <Home size={20} /> },
+    { path: '/about', label: 'About', icon: <Users size={20} /> },
+    { path: '/blog', label: 'Blog', icon: <FileText size={20} /> },
+    { path: '/news', label: 'News', icon: <Newspaper size={20} /> },
+    { path: '/products', label: 'Recipes', icon: <ChefHat size={20} /> }
   ];
 
   const isActive = (path) => {
@@ -24,7 +33,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className={styles.navLogo}>
           <Link to="/" className={styles.logoLink}>
-            <span className={styles.logoIcon}>👨‍🍳</span>
+            <ChefHat size={28} className={styles.logoIcon} />
             <span className={styles.logoText}>TasteMaster</span>
           </Link>
         </div>
@@ -45,14 +54,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div 
-          className={`${styles.mobileMenuBtn} ${isMenuOpen ? styles.open : ''}`}
+        <button 
+          className={styles.mobileMenuBtn}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
 
         {/* Mobile Navigation */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
